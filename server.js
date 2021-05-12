@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/welcome', (req, res) => {
-    res.send('<h1>This is Tema</h1>')
+    res.send('<h1>Login SucessFull</h1>')
+    const { Email, Password } = req.body;
 })
 
 

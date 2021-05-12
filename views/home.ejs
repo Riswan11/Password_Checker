@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
-<body>
+<body onload='document.form1.text1.focus()'>
     <div class="container">
         <form action="/welcome" method="post">
             <div class="mb-3 row col-xs-4>
@@ -24,7 +24,10 @@
             <div class="mb-3 row col-xs-4>
                 <label for=" inputPassword" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control-sm" id="inputPassword">
+                    <input type="password" class="form-control-sm" id="inputPassword"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        required onclick="allnumericplusminus(document.form1.text1)">
                 </div>
             </div>
             <button>submit</button>
