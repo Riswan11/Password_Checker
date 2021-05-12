@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.post('/welcome', (req, res) => {
+    res.send('<h1>This is Tema</h1>')
+})
+
 
 
 
